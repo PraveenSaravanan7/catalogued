@@ -12,6 +12,8 @@ import { useInView,InView } from 'react-intersection-observer';
 import { GridBox } from '../components/GridBox';
 import StackGrid from "react-stack-grid";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const copy = require('clipboard-copy')
 const ls = require("local-storage")
 export const UserPage = ({ match }) => {
@@ -65,9 +67,21 @@ export const UserPage = ({ match }) => {
     console.log("effect")
     Getuser()
   }, [])
+  function notify() {  toast.info('Link copied !!!', {
+    position: "bottom-center",
+    autoClose: 2000,
+    hideProgressBar: true,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    });
+  }
+  
   return (
     <div className="mb-5" >
       <Header login={false} ></Header>
+      <ToastContainer />
       {err  &&  <h1 className="mt70" >User not Found.</h1>  }
       {!loading&& !err && <> <div className="mt70" >
         <img className="m-auto dp2" src={user.profilepic ? user.profilepic : dp} />
@@ -76,7 +90,7 @@ export const UserPage = ({ match }) => {
           <div className="row" >
             <div className="col" >  <h3 className="mb-0" >{user.name} </h3></div>
             <div className="col-2" >
-              <span onClick={()=>{copy(window.location.host+"/#/user/"+user._id)}} >
+              <span onClick={()=>{copy(window.location.host+"/#/user/"+user._id);notify()}} >
               <FeatherIcon icon="share-2" className="mt-2" ></FeatherIcon>
               </span>
             </div>

@@ -8,6 +8,8 @@ import { EditProfile } from "./pages/EditProfile";
 import { AddPost } from "./pages/AddPost";
 import { CategoryPage } from "./pages/CategoryPage";
 import { ProductPage } from "./pages/ProductPage";
+import { SearchPage } from "./pages/SearchPage";
+import { FavoritePage } from "./pages/FavoritePage";
 const ls=require("local-storage")
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
       <Route exact path="/login" component={HomePage}></Route>
       <Route exact path="/editprofile" component={EditProfile}></Route>
       <Route exact path="/addpost" component={AddPost}></Route>
+      <Route exact path="/search" component={SearchPage}></Route>
+      <Route exact path="/favorite" component={FavoritePage}></Route>
       <CacheRoute multiple exact path="/category/:id" component={CategoryPage}></CacheRoute>
       <CacheRoute multiple exact path="/product/:id" component={ProductPage}></CacheRoute>
     </CacheSwitch>

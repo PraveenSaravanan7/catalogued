@@ -4,6 +4,9 @@ import { Loading } from "../components/Loading";
 import axios from "../api";
 import FeatherIcon from "feather-icons-react";
 import { WhatsAppBtn } from "../components/WhatsAppBtn";
+import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const copy = require('clipboard-copy')
 const ls=require("local-storage")
 export const ProductPage = ({match}) => {
@@ -66,9 +69,20 @@ export const ProductPage = ({match}) => {
       useEffect(()=>{
           Getpost()
       },[])
+      function notify() {  toast.info('Link copied !!!', {
+        position: "bottom-center",
+        autoClose: 2000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        });
+      }
     return (
         <div>
             <Header></Header>
+            <ToastContainer/>
       {err  &&  <h1 className="mt70" >Product not Found.</h1>  }
 
             {!loading && !err &&
@@ -86,9 +100,13 @@ export const ProductPage = ({match}) => {
                        {wa && <a type="button" target="_blank" href={"https://wa.me/91"+wa+"?text= I want *"+product.title+"*. %0A %0A Product_URL: http://"+window.location.host+"/"+"%23/product/"+product._id} className="btn btn-block btn-primary" > Buy Now </a>}
                         </div>                      
                         <div  className="col-4 text-right"  >
-                            <span  onClick={()=>{copy(window.location.href)}} >
-                        <FeatherIcon icon="heart" className="mt-2 mr-3" ></FeatherIcon> </span>
-                        <FeatherIcon icon="share-2" className="mt-2" ></FeatherIcon> 
+                          <Link to={"/favorite"} >
+                        <FeatherIcon color="black" icon="heart" className="mt-2 mr-3" ></FeatherIcon>
+                        </Link>
+                            <span  onClick={()=>{copy(window.location.href);notify()}} >
+                            <FeatherIcon icon="share-2" className="mt-2" ></FeatherIcon>
+                        </span>
+                   
                         </div>
                     </div>
                     </div>
