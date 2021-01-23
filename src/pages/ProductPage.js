@@ -69,7 +69,9 @@ export const ProductPage = ({match}) => {
     return (
         <div>
             <Header></Header>
-            {!loading &&
+      {err  &&  <h1 className="mt70" >Product not Found.</h1>  }
+
+            {!loading && !err &&
             <>
             {!deleted &&
                 <div className="mt70 mb-5" >

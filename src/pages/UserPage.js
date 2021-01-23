@@ -64,12 +64,12 @@ export const UserPage = ({ match }) => {
   useEffect(() => {
     console.log("effect")
     Getuser()
-    
   }, [])
   return (
     <div className="mb-5" >
       <Header login={false} ></Header>
-      {!loading&&  <> <div className="mt70" >
+      {err  &&  <h1 className="mt70" >User not Found.</h1>  }
+      {!loading&& !err && <> <div className="mt70" >
         <img className="m-auto dp2" src={user.profilepic ? user.profilepic : dp} />
 
         <div className="mt-3" >

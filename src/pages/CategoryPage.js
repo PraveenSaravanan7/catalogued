@@ -114,9 +114,12 @@ export const CategoryPage = ({match}) => {
       },[])
     return (
         <div>
-            { !loading&& 
+            <Header></Header>
+           {err  &&  <h1 className="mt70" >Category not Found.</h1>  }
+
+            { !loading&& !err &&
             <div>
-                <Header></Header>
+              
             {/* <Header_two name={query.get("category")} ></Header_two> */}
             { !deleted && <div className=" mt70  mb-5"> 
           

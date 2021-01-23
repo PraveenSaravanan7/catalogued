@@ -56,7 +56,7 @@ export const HomePage = () => {
           if(data.accessToken){
           ls("accessToken",data.accessToken);
           ls("user_id",data.user_id);
-          history.replace('/');
+          history.push('/user/me');
           }
         })
     }
@@ -67,7 +67,7 @@ export const HomePage = () => {
           console.log(data)
         ls("accessToken",data.accessToken);
         ls("user_id",data.user_id);
-        history.replace('/');
+        history.push('/user/me');
         }
       })
   }

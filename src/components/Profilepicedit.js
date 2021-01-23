@@ -51,7 +51,7 @@ export const Profilepicedit = (props) => {
     setloadingdsave(true)
     if (typeof cropper !== "undefined") {
       cropper.getCroppedCanvas().toBlob((blob) => {
-        imageCompression(blob, { maxSizeMB: 2, maxWidthOrHeight: 500 })
+        imageCompression(blob, { maxSizeMB: 2, maxWidthOrHeight: 1000 })
           .then((file) => {
             formData.append("avatar", file, filename)
             editprofilepic()
