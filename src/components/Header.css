@@ -1,0 +1,21 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 99;
+    background-color: white;
+    width: 100vw;
+    max-width: 680px;
+    /* border-bottom: 10px solid rgba(128, 128, 128, 0.1); */
+    
+}
+.logo{
+    font-size: 2em;
+    font-family: 'Passion One', cursive;
+    letter-spacing: 2px;
+    background: rgb(255,85,85);
+    background: linear-gradient(90deg, rgba(255,85,85,1) 0%, rgba(255,85,85,1) 28%, rgba(255,221,85,1) 43%, rgba(255,85,153,1) 55%, rgba(85,221,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
