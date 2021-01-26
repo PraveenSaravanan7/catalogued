@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/catalogued/static/css/main.ea3de589.chunk.css",
+    "main.css": "/catalogued/static/css/main.a6b7dd75.chunk.css",
     "main.js": "/catalogued/static/js/main.88dc0259.chunk.js",
     "main.js.map": "/catalogued/static/js/main.88dc0259.chunk.js.map",
     "runtime-main.js": "/catalogued/static/js/runtime-main.3a00f2b3.js",
@@ -10,7 +10,7 @@
     "static/js/2.fa5a58a8.chunk.js.map": "/catalogued/static/js/2.fa5a58a8.chunk.js.map",
     "index.html": "/catalogued/index.html",
     "static/css/2.7a70544b.chunk.css.map": "/catalogued/static/css/2.7a70544b.chunk.css.map",
-    "static/css/main.ea3de589.chunk.css.map": "/catalogued/static/css/main.ea3de589.chunk.css.map",
+    "static/css/main.a6b7dd75.chunk.css.map": "/catalogued/static/css/main.a6b7dd75.chunk.css.map",
     "static/js/2.fa5a58a8.chunk.js.LICENSE.txt": "/catalogued/static/js/2.fa5a58a8.chunk.js.LICENSE.txt",
     "static/media/dp.280bc121.svg": "/catalogued/static/media/dp.280bc121.svg",
     "static/media/logo.0b345ffd.svg": "/catalogued/static/media/logo.0b345ffd.svg",
@@ -21,7 +21,7 @@
     "static/js/runtime-main.3a00f2b3.js",
     "static/css/2.7a70544b.chunk.css",
     "static/js/2.fa5a58a8.chunk.js",
-    "static/css/main.ea3de589.chunk.css",
+    "static/css/main.a6b7dd75.chunk.css",
     "static/js/main.88dc0259.chunk.js"
   ]
 }
